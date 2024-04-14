@@ -1,7 +1,9 @@
-MALE = 'M'
-FEMALE = 'F'
+DEPOSIT = 1
+WITHDRAWAL = 2
+INTEREST = 3
 
-GENDER_CHOICE = (
-    (MALE, "Male"),
-    (FEMALE, "Female"),
+TRANSACTION_TYPE_CHOICES = (
+    (DEPOSIT, 'Deposit'),
+    (WITHDRAWAL, 'Withdrawal'),
+    (INTEREST, 'Interest'),
 )
