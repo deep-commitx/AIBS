@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
 
 from .constants import TRANSACTION_TYPE_CHOICES
 from accounts.models import UserBankAccount
