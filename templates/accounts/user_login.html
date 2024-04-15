@@ -1,6 +1,6 @@
 {% extends 'core/base.html' %}
 
-{% block head_title %}Banking System{% endblock %}
+{% block head_title %}AI Banking System{% endblock %}
 
 {% block content %}
 {% if form.non_field_errors %}
@@ -14,7 +14,7 @@
 <h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10">Sign In</h1>
 <hr>
 <div class="w-full mt-10">
-    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <form method="post" class="bg-indigo-200 shadow-md rounded px-8 pt-6 pb-8 mb-10">
         {% csrf_token %}
         {% for hidden_field in form.hidden_fields %}
             {{ hidden_field.errors }}
@@ -34,7 +34,7 @@
             {% endif %}
         {% endfor %}
 
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-center">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                 Sign In
             </button>

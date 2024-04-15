@@ -1,6 +1,6 @@
-<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+<nav class="flex items-center justify-between flex-wrap bg-indigo-500 p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="font-semibold text-xl tracking-tight">AIBS</span>
+        <span class="font-semibold text-xl tracking-tight"><a href="/">AIBS - ARTIFICIAL INTELLIGENCE BANKING SYSTEM</a></span>
     </div>
     <div class="block lg:hidden">
         <button class="flex items-center px-3 py-2 border rounded text-white border-white-400 hover:text-white hover:border-white">
@@ -11,7 +11,7 @@
         {% if request.user.is_authenticated %}
             <div class="text-md lg:flex-grow">
                 <a href="{% url 'transactions:transaction_report' %}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                    Transaction Report
+                    Transaction History
                 </a>
                 <a href="{% url 'transactions:deposit_money' %}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
                     Deposit
@@ -21,15 +21,15 @@
                 </a>
             </div>
             <div>
-                <a href="{% url 'accounts:user_logout' %}" class="inline-block font-medium text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Logout</a>
+                <a href="{% url 'accounts:user_logout' %}" class="inline-block font-medium text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Sign Out</a>
             </div>
         {% else %}
             <div class="text-md lg:flex-grow"></div>
             <div>
-                <a href="{% url 'accounts:user_login' %}" class="mr-2 inline-block font-medium text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Login</a>
+                <a href="{% url 'accounts:user_login' %}" class="mr-2 inline-block font-medium text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Sign In</a>
             </div>
             <div>
-                <a href="{% url 'accounts:user_registration' %}" class="inline-block font-medium text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Register</a>
+                <a href="{% url 'accounts:user_registration' %}" class="inline-block font-medium text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">Open A/C</a>
             </div>
         {% endif %}
     </div>
